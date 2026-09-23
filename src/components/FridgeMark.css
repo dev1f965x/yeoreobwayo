@@ -1,0 +1,21 @@
+.mark {
+  width: 28px;
+  height: 28px;
+  flex-shrink: 0;
+}
+
+.mark__inside {
+  fill: transparent;
+  transition: fill 240ms ease-out;
+}
+
+.mark[data-filled="true"] .mark__inside {
+  fill: var(--accent-quiet);
+}
+
+.mark__lines {
+  fill: none;
+  stroke: var(--accent);
+  stroke-width: 2;
+  stroke-linecap: round;
+}
