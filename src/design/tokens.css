@@ -1,0 +1,47 @@
+:root {
+  /* A clean kitchen in the morning: white surfaces, a green worth eating, warm paper. */
+  --surface-base: #f6f8f4;
+  --surface-raised: #ffffff;
+  --surface-sunken: #eceee8;
+  --border-subtle: #e3e7dd;
+  --border-strong: #ccd3c4;
+
+  --accent: #2f6d47;
+  --accent-bright: #3f8f5f;
+  --accent-quiet: #3f8f5f1a;
+
+  --soon: #9a6510;
+  --soon-quiet: #9a65101a;
+  --past: #ab3f36;
+  --past-quiet: #ab3f361a;
+
+  --text-strong: #1c231e;
+  --text-body: #333d35;
+  --text-muted: #5c6a5f;
+  --text-faint: #63705f;
+
+  --text-small: 0.8125rem;
+  --text-base: 1rem;
+  --text-title: 1.125rem;
+  --text-display: 1.5rem;
+  --leading-body: 1.55;
+  --leading-title: 1.3;
+
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+
+  --radius-small: 10px;
+  --radius-medium: 16px;
+  --radius-large: 22px;
+  --radius-pill: 999px;
+
+  --shadow-card: 0 1px 2px rgb(28 35 30 / 0.06), 0 1px 1px rgb(28 35 30 / 0.04);
+  --shadow-raised: 0 -6px 28px rgb(28 35 30 / 0.12);
+
+  /* The thumb's reach on a phone, which every button has to fill (ADR 2). */
+  --tap: 44px;
+}

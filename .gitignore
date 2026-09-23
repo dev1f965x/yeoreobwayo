@@ -22,3 +22,11 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+screens/
+test-results/
+playwright-report/
+
+# The Android signing key and the file that points at it live outside the repository.
+key.properties
+*.jks
+*.keystore
