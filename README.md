@@ -15,7 +15,7 @@
   <h3 align="center">열어봐요</h3>
 
   <p align="center">
-    The fridge, filled in as the shopping bag is unpacked — what is in it, how much, and what has to be eaten first.
+    The fridge, filled in as the shopping bag is unpacked: what is in it, how much, and what has to be eaten first.
     <br />
     <a href="https://dev1f965x.github.io/yeoreobwayo/">Open it »</a>
     ·
@@ -59,9 +59,8 @@
   <img src="docs/app.png" alt="The fridge, with what has to go first at the top" width="340">
 </div>
 
-Every fridge app fails at the same place: **putting things in**. Nobody opens an app after
-the shopping to type fourteen lines, so the list goes stale in a week and the milk goes off
-behind it anyway.
+Every fridge app fails at the same place: **putting things in**. A list that costs fourteen
+lines of typing after the shopping goes stale within a week.
 
 열어봐요 is built around the two minutes after the shopping.
 
@@ -72,9 +71,9 @@ behind it anyway.
 - **The fridge** is sorted by what has to go first, with what is past and what is close
   marked plainly. One tap takes one away when it is eaten; throwing something out is a
   separate tap, and is counted as waste rather than as a meal.
-- **Recipes** are sorted by how much of each is already in the fridge — what can be cooked
-  right now, then what one more thing would make — and a dish that uses up something about
-  to go is lifted among equals.
+- **Recipes** are sorted by how much of each is already in the fridge: what can be cooked
+  now, then what one more item would make. Among equals, a dish that uses something about
+  to go comes first.
 - Everything stays on the device. No account, no sync, no analytics; the photos never leave
   the browser they were taken in.
 

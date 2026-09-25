@@ -13,7 +13,7 @@ interface Props {
   onThrowOut: () => void;
 }
 
-/** One thing in the fridge: what it is, how much is left of it, and how long it has. */
+/** One thing in the fridge: what it is, how much is left, and how long it has. */
 export function ItemCard({ item, today, photos, onEat, onThrowOut }: Props) {
   const left = daysLeft(item, today);
   const shot = usePhoto(photos, item.photo);
@@ -61,7 +61,7 @@ export function ItemCard({ item, today, photos, onEat, onThrowOut }: Props) {
   );
 }
 
-/** The photo, fetched from the picture store the first time the row is on screen. */
+/** The photo, read from the picture store the first time the row is on screen. */
 function usePhoto(photos: Photos, id: string | undefined): string | undefined {
   const [url, setUrl] = useState<string>();
 

@@ -21,7 +21,7 @@ export interface AppProps {
 
 type Tab = "fridge" | "recipes";
 
-/** The whole app: what is in the fridge, what it can cook, and the bag waiting to go in. */
+/** The whole app: what is in the fridge, what it can cook, and the way in. */
 export default function App({ store, photos, now }: AppProps) {
   const ticking = useNow();
   const fridge = useFridge(store, photos, now ?? ticking);

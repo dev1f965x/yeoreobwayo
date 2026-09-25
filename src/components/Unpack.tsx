@@ -20,8 +20,10 @@ const QUICK_DAYS = [0, 3, 7, 14, 30];
 
 /**
  * The screen the app is built around: one thing out of the bag at a time, typed once and
- * in with a tap. It stays open and empties itself after each one, because the bag has
- * fourteen things in it (ADR 5).
+ * added with a tap.
+ *
+ * It stays open and clears itself after each item, since a shopping bag holds a dozen or
+ * more (ADR 5).
  */
 export function Unpack({ today, recall, suggest, onPut, onClose }: Props) {
   const [name, setName] = useState("");
@@ -38,7 +40,7 @@ export function Unpack({ today, recall, suggest, onPut, onClose }: Props) {
   const suggestions = suggest(name);
   const left = daysBetween(today, expiresOn);
 
-  // The sheet opens straight onto the keyboard: the name is where every item starts.
+  // Every item starts with its name, so the sheet opens with the keyboard up.
   useEffect(() => field.current?.focus(), []);
 
   /** Takes a name on, with whatever was said about it the last time it was bought. */

@@ -2,7 +2,7 @@ import type { Page } from "@playwright/test";
 
 /** Opens the app with a fridge already stored, as someone coming back to it finds it. */
 export async function openApp(page: Page, items: unknown[] = [], names: unknown[] = []) {
-  // Seeded once, not on every navigation, so a reload sees what the app itself wrote.
+  // Seeded once, not on every navigation, so a reload sees what the app wrote.
   await page.addInitScript(
     ([items, names]) => {
       if (window.localStorage.getItem("yeoreobwayo.items") !== null) return;

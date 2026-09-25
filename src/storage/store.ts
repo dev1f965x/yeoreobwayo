@@ -29,7 +29,7 @@ function read(key: string): unknown {
   try {
     return JSON.parse(localStorage.getItem(key) ?? "[]");
   } catch {
-    // Blocked or full storage is not worth an error screen; an empty fridge is honest.
+    // Blocked or full storage is reported as an empty fridge rather than as an error.
     return [];
   }
 }
@@ -41,8 +41,10 @@ function write(key: string, value: unknown) {
 }
 
 /**
- * Keeps only what this build understands. A value written by another version, or edited by
- * hand, costs its own entry rather than the whole screen.
+ * Keeps only what this build understands.
+ *
+ * An entry written by another version, or edited by hand, is dropped on its own rather
+ * than failing the read.
  */
 export function itemsFrom(stored: unknown): Item[] {
   if (!Array.isArray(stored)) return [];
