@@ -1,6 +1,8 @@
 /**
- * What sort of thing it is — the one question that makes an expiry date guessable, and so
- * the only one the unpacking screen asks beyond the name (ADR 6).
+ * What sort of thing it is.
+ *
+ * This is what makes an expiry date guessable, and so the only question the unpacking
+ * screen asks beyond the name (ADR 6).
  */
 export type Kind =
   | "vegetable"
@@ -30,9 +32,10 @@ export const KINDS: readonly Kind[] = [
 ];
 
 /**
- * How long each kind usually lasts in a fridge, in days. These are the careful end of what
- * food safety guidance says, because the app's mistake should be asking a person to eat
- * something early, never late.
+ * How long each kind usually lasts in a fridge, in days.
+ *
+ * These sit at the cautious end of published food safety guidance, so that an error asks
+ * for something to be eaten early rather than late.
  */
 const SHELF_LIFE: Record<Kind, number> = {
   vegetable: 7,

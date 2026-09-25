@@ -2,17 +2,16 @@
 
 ## Problem
 
-The fridge is a drawer that hides things. Something was bought twice because nobody could
-remember; something else went off behind the milk. The fix everybody knows — write down
-what is in there — fails at the same place every time: **putting it in**. Nobody opens an
-app after the shopping to type fourteen lines.
+Things get bought twice because nobody remembers what is already there, and other things
+go off unseen. The obvious fix, writing down what is in the fridge, fails at the same
+point every time: **putting it in**. A list that costs fourteen lines of typing after the
+shopping does not get kept up.
 
 ## Who it is for
 
-Someone who does the household shopping — living alone or cooking for a family — and wants
+Someone who does the household shopping, living alone or cooking for a family, and wants
 two answers without opening the door: **what do I have**, and **what has to be eaten
-first**. They are not organised by nature; the app has to be faster than the shame of
-throwing food away.
+first**. Entering an item has to cost less than the waste it prevents.
 
 ## 1.0.0 scope
 
@@ -51,8 +50,8 @@ The app is built around the two minutes after the shopping, and around dinner.
 - No account, no sync between phone and browser, no sharing a fridge with the family in
   1.0.0. The kitchen is one device's problem until the app earns more.
 - No barcode database and no receipt reading in 1.0.0 (ADR 5): both need either a network
-  service or a native model, and neither is worth delaying the thing that actually blocks
-  people — putting the items in.
+  service or a native model, and neither is worth delaying what actually blocks people,
+  which is putting the items in.
 - No nutrition, no calories, no meal planning for the week.
 - No notifications in 1.0.0. The app is opened when the fridge is opened.
 

@@ -8,7 +8,7 @@ import { inCookingOrder, RECIPES } from "../domain/recipes";
 import type { Photos } from "../storage/photos";
 import type { Store } from "../storage/store";
 
-/** What the unpacking screen hands over once a thing has been taken out of the bag. */
+/** What the unpacking screen hands over for one item. */
 export interface Unpacked {
   name: string;
   kind: Kind;
@@ -17,7 +17,7 @@ export interface Unpacked {
   photo?: Blob;
 }
 
-/** What the fridge looked like a moment ago, kept so that one tap can put it back. */
+/** The fridge as it was a moment ago, kept so one tap can restore it. */
 interface Before {
   items: Item[];
   gone: Gone[];
@@ -75,7 +75,7 @@ export function useFridge(store: Store, photos: Photos, now: Date) {
     [items, names, today, keepItems, photos, store],
   );
 
-  /** Takes one away, or throws the rest of it out, and offers to take that back. */
+  /** Takes one away, or removes the rest of it, and offers to undo either. */
   const take = useCallback(
     (id: string, why: Gone["why"]) => {
       const item = items.find((each) => each.id === id);

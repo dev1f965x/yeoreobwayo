@@ -2,9 +2,10 @@ import type { Day } from "./day";
 import { daysLeft, type Item, SOON_DAYS } from "./fridge";
 
 /**
- * An everyday dish, described by what has to be in the fridge for it. Seasoning is listed
- * apart and never counted as missing: a kitchen has soy sauce, and a recipe list that asks
- * a person to go and buy it is a list nobody reads.
+ * An everyday dish, described by what has to be in the fridge for it.
+ *
+ * Seasoning is listed apart and never counted as missing, since most kitchens hold it and
+ * counting it would mark nearly every recipe short.
  */
 export interface Recipe {
   id: string;
@@ -26,8 +27,10 @@ export interface Match {
 
 /**
  * Other names for the same ingredient, so that a fridge holding 삼겹살 can cook a recipe
- * that asks for 돼지고기. A written-out list beats guessing at the letters: Korean cuts of
- * meat share no syllables with the animal.
+ * asking for 돼지고기.
+ *
+ * The list is written out rather than derived, since Korean cuts of meat share no syllables
+ * with the animal.
  */
 const ALSO: Record<string, readonly string[]> = {
   돼지고기: ["삼겹살", "목살", "앞다리살", "뒷다리살", "돼지", "다짐육", "대패삼겹살"],
@@ -77,8 +80,8 @@ export function match(recipe: Recipe, items: readonly Item[], today: Day): Match
 }
 
 /**
- * What to cook, in the order a person would ask: what the fridge can already make, then
- * what one more thing would make — and among those, whatever uses up what is about to go.
+ * What to cook, ordered by what the fridge can already make, then by what one more item
+ * would make. Among equals, a dish that uses something about to go comes first.
  */
 export function inCookingOrder(
   recipes: readonly Recipe[],

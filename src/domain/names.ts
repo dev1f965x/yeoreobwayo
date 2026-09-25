@@ -3,8 +3,9 @@ import type { Item } from "./fridge";
 import type { Kind } from "./kinds";
 
 /**
- * A name the person has typed before, with what they said it was and how long they gave
- * it. Typing it again is then one tap, which is the whole point of the unpacking screen
+ * A name typed before, with the kind and the length it was given.
+ *
+ * Typing it again then costs one tap, which is what keeps the unpacking screen fast
  * (ADR 5).
  */
 export interface Remembered {

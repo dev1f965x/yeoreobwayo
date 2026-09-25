@@ -7,8 +7,7 @@ interface Props {
 }
 
 /**
- * One dish, with every ingredient shown as held, held and about to go, or still to buy —
- * which is the whole answer to "what do I cook tonight" in one glance.
+ * One dish, with each ingredient shown as held, held and about to go, or still to buy.
  */
 export function RecipeCard({ match }: Props) {
   const { recipe, has, missing, urgent } = match;
