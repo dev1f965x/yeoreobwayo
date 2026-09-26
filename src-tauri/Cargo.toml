@@ -1,6 +1,6 @@
 [package]
 name = "yeoreobwayo"
-version = "1.0.0"
+version = "1.0.1"
 description = "The fridge, filled in as the bag is unpacked"
 authors = ["dev1f965x"]
 edition = "2021"
